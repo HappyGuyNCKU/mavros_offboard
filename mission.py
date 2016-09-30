@@ -31,6 +31,7 @@ throttle_pub = None
 throttle_msg = None
 last_pos_z = 1.5
 flight_state = "None"
+local_pos_pub = None
 
 def state_cb(msg):
     current_state = msg
@@ -119,6 +120,7 @@ def main():
     global throttle_pub
     global throttle_msg
     global flight_state
+    global local_pos_pub
     rospy.init_node('rosmav_test_client', anonymous=True)
     mavros.set_namespace()  # initialize mavros module with default namespace
     #state_sub = rospy.Subscriber('mavros/state', State, state_cb, queue_size=10)
@@ -197,7 +199,8 @@ def main():
     while not rospy.is_shutdown():
         mission(msg)
         if flight_state=="Interrupt":
-			break
+            print "Interrupt"
+            break
 
 
 
@@ -210,21 +213,18 @@ def main():
     print("landing")
     msg.pose.position.x = 0
     msg.pose.position.y = 0
-    msg.pose.position.z = 1
+    msg.pose.position.z = 5
     for x in range(0, 50):
         local_pos_pub.publish(msg)
         rate.sleep()
 
-    msg.pose.position.x = 0
-    msg.pose.position.y = 0
-    msg.pose.position.z = 0
-    for x in range(0, 10):
-        local_pos_pub.publish(msg)
-        rate.sleep()   
- 
+    resp = set_mode_client.call(0, 'AUTO.LAND')
+    print ("SetMode state = %r" % resp)
+    for x in range(0, 100):
+        rate.sleep() 
+	
     try:
-        print("disarm")
-        arming_client.call(False)
+        pass
     except:
         rospy.loginfo("PX4 Ctl Shutting down")
 	
