@@ -56,6 +56,7 @@ def position_control():
 
     print (current_gps)
     last_request = rospy.get_rostime()
+    count = 0
     while not rospy.is_shutdown():
         now = rospy.get_rostime()
         if current_state.mode != "OFFBOARD" and (now - last_request > rospy.Duration(5.)):
@@ -81,6 +82,13 @@ def position_control():
         #print "gps latitude:".format(current_gps.latitude)
         #print "gps longitude: ".format(current_gps.longitude)
         rate.sleep()
+        count = count +1
+        if count%100 == 0:
+            print count
+        if count > 500:
+            break
+	
+    set_mode_client(base_mode=0, custom_mode="AUTO.LAND")
 
 if __name__ == '__main__':
     try:
