@@ -78,7 +78,7 @@ def quaternion(c,b,a,d):
     print "Pitch = %f" % pitch
     print "Yaw = %f" % yaw
 
-def set_attitude(dur,throttle,s,w,x,y,z):
+def set_attitude():
     global attitude_pos_pub
     global attitude_pos_msg
     global rate
@@ -86,15 +86,10 @@ def set_attitude(dur,throttle,s,w,x,y,z):
     global throttle_msg
     
     #throttle_msg.data = throttle
-    print(s)
-    attitude_pos_msg.pose.orientation.x = x
-    attitude_pos_msg.pose.orientation.y = y
-    attitude_pos_msg.pose.orientation.z = z
-    attitude_pos_msg.pose.orientation.w = w
-    for x in range(0,dur):
-        throttle_pub.publish(throttle_msg)
-        attitude_pos_pub.publish(attitude_pos_msg)
-        rate.sleep()
+    #print(s)
+    throttle_pub.publish(throttle_msg)
+    attitude_pos_pub.publish(attitude_pos_msg)
+    rate.sleep()
 
 def ultrasonci_cb(msg):
     global flight_state
@@ -108,6 +103,12 @@ def set_pos_msg(msg,x,y,z):
     msg.pose.position.y = y
     msg.pose.position.z = z
 
+def set_attitude_msg(attitude_pos_msg,w,x,y,z):
+    attitude_pos_msg.pose.orientation.x = x
+    attitude_pos_msg.pose.orientation.y = y
+    attitude_pos_msg.pose.orientation.z = z
+    attitude_pos_msg.pose.orientation.w = w
+
 ###########mission function################
 def mission(msg):
     global flight_state
@@ -116,6 +117,8 @@ def mission(msg):
         set_pos_msg(msg,0,0,2)
         local_pos_pub.publish(msg)
         rate.sleep()
+    elif flight_state == "ALT_CTL":
+        set_attitude()
     elif flight_state == "OBSTACLE_AVOID":
         set_attitude(1,0.533,"",0.99144,-0.13053,0,0)
     elif flight_state == "OBSTACLE_CLEAR":
@@ -187,9 +190,10 @@ def main():
     for x in range(0, 50):
     	local_pos_pub.publish(msg)
         rate.sleep()
-    flight_state = "SET_POINT"
+    flight_state = "ALT_CTL"
 #########Loop################
     print "mission"
+    set_attitude_msg(attitude_pos_msg,0,1,0,0):
     #set_pos_msg(msg,0,0,4)
     #for x in range(0, 50):
     #    local_pos_pub.publish(msg)
