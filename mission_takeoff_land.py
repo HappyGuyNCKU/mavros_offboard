@@ -189,7 +189,8 @@ def main():
         rate.sleep()
     flight_state = "SET_POINT"
 #########Loop################
-    print "mission"
+    print "into mission"
+    print "ctrl-C to land"
     #set_pos_msg(msg,0,0,4)
     #for x in range(0, 50):
     #    local_pos_pub.publish(msg)

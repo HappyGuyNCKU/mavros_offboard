@@ -72,14 +72,14 @@ def data_cb(data_msg):
     #    acce_state = -1
 
 
-def quaternion(c,b,a,d):
-    roll=math.atan(2*(a*b+c*d)/(a*a-b*b-c*c+d*d))
-    pitch=-1*math.asin(2*(b*d-a*c))
-    yaw=math.atan(2*(a*d+b*c)/(a*a+b*b-c*c-d*d))
-    print "Quaternion:"
-    print "Roll = %f" % roll
-    print "Pitch = %f" % pitch
-    print "Yaw = %f" % yaw
+#def quaternion(c,b,a,d):
+#    roll=math.atan(2*(a*b+c*d)/(a*a-b*b-c*c+d*d))
+#    pitch=-1*math.asin(2*(b*d-a*c))
+#    yaw=math.atan(2*(a*d+b*c)/(a*a+b*b-c*c-d*d))
+#    print "Quaternion:"
+#    print "Roll = %f" % roll
+#    print "Pitch = %f" % pitch
+#    print "Yaw = %f" % yaw
 
 def set_attitude():
     global attitude_pos_pub
@@ -177,8 +177,10 @@ def main():
     q = Quaternion()
     q_left = Quaternion()
     q_right = Quaternion()
-    q_left = quaternion(1,0,0,10)
-    q_right = quaternion(1,0,0,-10)
+    q_stable = Quaternion()
+    q_stable.quaternion(1,0,0,0)
+    q_left.quaternion(1,0,0,15)
+    q_right.quaternion(1,0,0,-15)
 
 ################### Take off#####
 
@@ -201,7 +203,7 @@ def main():
         rate.sleep()
     flight_state = "ALT_CTL"
 #########Loop################
-    print "mission"
+    print "mission ctl-C to land"
     set_attitude_msg(attitude_pos_msg,q)
     #set_pos_msg(msg,0,0,4)
     #for x in range(0, 50):
@@ -214,15 +216,23 @@ def main():
             break
         mission(msg)
         count = count + 1
-        mod = count % 1000
-        if(mod == 200)
+        mod = count % 200
+        if(mod == 70):
+            print 70
             set_attitude_msg(attitude_pos_msg,q.multipy(q_left))
-        elif(mod == 400)
+            q.printq()
+        elif(mod == 100):
+            print 100
+            set_attitude_msg(attitude_pos_msg,q.multipy(q_stable))
+            q.printq()
+        elif(mod == 160):
+            print 160
             set_attitude_msg(attitude_pos_msg,q.multipy(q_right))
-        elif(mod == 700)
-            set_attitude_msg(attitude_pos_msg,q.multipy(q_right))
-        elif(mod == 900)
-            set_attitude_msg(attitude_pos_msg,q.multipy(q_left))
+            q.printq()
+        elif(mod == 190):
+            print 190
+            set_attitude_msg(attitude_pos_msg,q.multipy(q_stable))
+            q.printq()
 
 
 
