@@ -135,19 +135,19 @@ def main():
     global flight_state
     global local_pos_pub
     rospy.init_node('rosmav_test_client', anonymous=True)
-    mavros.set_namespace('/mavros')  # initialize mavros module with default namespace
+    mavros.set_namespace()  # initialize mavros module with default namespace
     #state_sub = rospy.Subscriber('mavros/state', State, state_cb, queue_size=10)
-    local_pos_pub = rospy.Publisher('setpoint_position/local', PoseStamped, queue_size=10)
-    arming_client = rospy.ServiceProxy('cmd/arming', CommandBool)
-    set_mode_client = rospy.ServiceProxy('set_mode', SetMode)
+    local_pos_pub = rospy.Publisher('/mavros/setpoint_position/local', PoseStamped, queue_size=10)
+    arming_client = rospy.ServiceProxy('/mavros/cmd/arming', CommandBool)
+    set_mode_client = rospy.ServiceProxy('/mavros/set_mode', SetMode)
     
-    throttle_pub = rospy.Publisher('setpoint_attitude/att_throttle', std_msgs.msg.Float64, queue_size=10)
+    throttle_pub = rospy.Publisher('/mavros/setpoint_attitude/att_throttle', std_msgs.msg.Float64, queue_size=10)
 
-    attitude_pos_pub = rospy.Publisher('setpoint_attitude/attitude', PoseStamped, queue_size=10)
+    attitude_pos_pub = rospy.Publisher('/mavros/setpoint_attitude/attitude', PoseStamped, queue_size=10)
     
-    data_sub = rospy.Subscriber('global_position/rel_alt', std_msgs.msg.Float64, data_cb ,queue_size=1)
+    data_sub = rospy.Subscriber('/mavros/global_position/rel_alt', std_msgs.msg.Float64, data_cb ,queue_size=1)
 
-    distance_sub = rospy.Subscriber('ultrasonic',std_msgs.msg.Int16, ultrasonci_cb, queue_size=1)
+    distance_sub = rospy.Subscriber('/mavros/ultrasonic',std_msgs.msg.Int16, ultrasonci_cb, queue_size=1)
     rate = rospy.Rate(10)   # 10hz
 
     while (current_state and current_state.connected):
@@ -193,7 +193,7 @@ def main():
     flight_state = "ALT_CTL"
 #########Loop################
     print "mission"
-    set_attitude_msg(attitude_pos_msg,0,1,0,0):
+    set_attitude_msg(attitude_pos_msg,1,0,0,0)
     #set_pos_msg(msg,0,0,4)
     #for x in range(0, 50):
     #    local_pos_pub.publish(msg)
