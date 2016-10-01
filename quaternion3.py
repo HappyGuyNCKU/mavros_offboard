@@ -25,9 +25,9 @@ class Quaternion:
 
 	def quaternion(self,i,j,k,degree):
 		mag = math.sqrt(i*i+j*j+k*k)
-		print mag
+		print (mag)
 		half_t = (math.pi/2.0/180.0*degree)
-		print half_t
+		#print (half_t)
 		self.w = math.cos(half_t)
 		self.x = i/mag*math.sin(half_t)
 		self.y = j/mag*math.sin(half_t)
@@ -36,8 +36,8 @@ class Quaternion:
 		return self
 	
 	def printq(self):
-		print self.w		
-		print self.x
-		print self.y
-		print self.z
+		print (self.w)		
+		print (self.x)
+		print (self.y)
+		print (self.z)
 		return self
