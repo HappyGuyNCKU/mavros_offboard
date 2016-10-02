@@ -22,7 +22,7 @@ from mavros import setpoint as SP
 from tf.transformations import quaternion_from_euler
 
 import signal, os
-
+import sys
 
 ############flight_state##################
 #"Interrupt"
@@ -41,15 +41,18 @@ throttle_msg = None
 last_pos_z = 1.5
 flight_state = "None"
 local_pos_pub = None
+set_mode_client = None
 
 def state_cb(msg):
     current_state = msg
 
 
 def INT_handler(signum, frame):
+    global set_mode_client
     print 'Signal handler called with signal', signum
-    global flight_state
-    flight_state = "Interrupt"
+    resp = set_mode_client.call(0, 'AUTO.LAND')
+    print ("SetMode state = %r" % resp)    
+    sys.exit()
 
 def data_cb(data_msg):
     pos_z = data_msg.data
@@ -134,6 +137,7 @@ def main():
     global throttle_msg
     global flight_state
     global local_pos_pub
+    global set_mode_client
     rospy.init_node('rosmav_test_client', anonymous=True)
     mavros.set_namespace()  # initialize mavros module with default namespace
     #state_sub = rospy.Subscriber('mavros/state', State, state_cb, queue_size=10)
@@ -179,6 +183,8 @@ def main():
         local_pos_pub.publish(msg)
         rate.sleep()
 
+    print "Takeoff !!!"
+
     resp = set_mode_client.call(0, 'OFFBOARD')
     print ("SetMode state = %r" % resp)
 
@@ -211,15 +217,15 @@ def main():
     msg.pose.position.y = 0
     msg.pose.position.z = 5
 
-    for x in range(0, 50):
-        local_pos_pub.publish(msg)
-        rate.sleep()
+#    for x in range(0, 50):
+#        local_pos_pub.publish(msg)
+#        rate.sleep()
 
 ####### need time to land ###################
     resp = set_mode_client.call(0, 'AUTO.LAND')
     print ("SetMode state = %r" % resp)
-    for x in range(0, 100):
-        rate.sleep() 
+#    for x in range(0, 100):
+#        rate.sleep() 
 	
     try:
         pass
