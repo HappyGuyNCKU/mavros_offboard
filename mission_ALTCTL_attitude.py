@@ -179,8 +179,8 @@ def main():
     q_right = Quaternion()
     q_stable = Quaternion()
     q_stable.quaternion(1,0,0,0)
-    q_left.quaternion(1,0,0,15)
-    q_right.quaternion(1,0,0,-15)
+    q_left.quaternion(1,0,0,7)
+    q_right.quaternion(1,0,0,-7)
 
 ################### Take off#####
 
@@ -218,21 +218,13 @@ def main():
         count = count + 1
         mod = count % 200
         if(mod == 70):
-            print 70
             set_attitude_msg(attitude_pos_msg,q.multipy(q_left))
-            q.printq()
         elif(mod == 100):
-            print 100
-            set_attitude_msg(attitude_pos_msg,q.multipy(q_stable))
-            q.printq()
-        elif(mod == 160):
-            print 160
             set_attitude_msg(attitude_pos_msg,q.multipy(q_right))
-            q.printq()
+        elif(mod == 160):
+            set_attitude_msg(attitude_pos_msg,q.multipy(q_right))
         elif(mod == 190):
-            print 190
-            set_attitude_msg(attitude_pos_msg,q.multipy(q_stable))
-            q.printq()
+            set_attitude_msg(attitude_pos_msg,q.multipy(q_left))
 
 
 
@@ -251,8 +243,8 @@ def main():
 ####### need time to land ###################
     resp = set_mode_client.call(0, 'AUTO.LAND')
     print ("SetMode state = %r" % resp)
-    for x in range(0, 100):
-        rate.sleep() 
+    #for x in range(0, 100):
+    #    rate.sleep() 
 	
     try:
         pass
