@@ -55,17 +55,17 @@ def INT_handler(signum, frame):
     print ("SetMode state = %r" % resp)    
     sys.exit()
 
-offset  = 0.1
+offset  = 0.57
 
 def data_cb(data_msg):
     pos_z = data_msg.data
     global last_pos_z
     global throttle_msg
-    target_pos_z = 0.9
-    max_thrust = 0.6
+    target_pos_z = 7.6
+    max_thrust = 0.85
     p = 0.15
-    s_force = 0#p * (target_pos_z-pos_z)
-    d_force = 0# -1*(pos_z - last_pos_z)*10*math.sqrt(p)
+    s_force = p * (target_pos_z-pos_z)
+    d_force =  -1*(pos_z - last_pos_z)*10*math.sqrt(p)
     last_pos_z = pos_z
     if (s_force + d_force +offset) > max_thrust:
         throttle_msg.data = offset
@@ -205,9 +205,9 @@ def main():
 
 
 
-    for x in range(0, 50):
-    	local_pos_pub.publish(msg)
-        rate.sleep()
+#for x in range(0, 50):
+#    	local_pos_pub.publish(msg)
+#        rate.sleep()
     flight_state = "ALT_CTL"
 #########Loop################
     print "mission"
