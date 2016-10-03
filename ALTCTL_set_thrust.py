@@ -55,7 +55,7 @@ def INT_handler(signum, frame):
     print ("SetMode state = %r" % resp)    
     sys.exit()
 
-offset  = 0.57
+offset  = 0.1
 
 def data_cb(data_msg):
     pos_z = data_msg.data

@@ -47,14 +47,21 @@ set_mode_client = None
 def state_cb(msg):
     current_state = msg
 
+int_count = 0
+is_land = False
 
 def INT_handler(signum, frame):
-    global set_mode_client
-    print 'Signal handler called with signal', signum
-    resp = set_mode_client.call(0, 'AUTO.LAND')
-    print ("SetMode state = %r" % resp)    
-    sys.exit()
-
+    global int_count
+    if int_count > 0:
+        global set_mode_client
+    
+        print 'Signal handler called with signal', signum
+        resp = set_mode_client.call(0, 'AUTO.LAND')
+        print ("SetMode state = %r" % resp)    
+        sys.exit()
+    else:
+        is_land = True
+        
 
 
 def data_cb(data_msg):
@@ -98,10 +105,11 @@ def set_attitude():
     attitude_pos_pub.publish(attitude_pos_msg)
     rate.sleep()
 
-offset  = 0.57
+offset  = 0.62
+land_thrust = 0.605
 
-def ultrasonic_cb(msg):
-    pos_z = data_msg.data
+def laser_cb(msg):
+    pos_z = data_msg.data/1000.0
     global last_pos_z
     global throttle_msg
     target_pos_z = 100
@@ -110,8 +118,13 @@ def ultrasonic_cb(msg):
     s_force = p * (target_pos_z-pos_z)
     d_force =  -1*(pos_z - last_pos_z)*10*math.sqrt(p)
     last_pos_z = pos_z
-    if (s_force + d_force +offset) > max_thrust:
+
+    if is_land == True :
+        throttle_msg.data = land_thrust
+    elif (s_force + d_force +offset) > max_thrust:
         throttle_msg.data = offset
+    elif (s_force + d_force +offset) < 0:
+        throttle_msg.data = 0
     else :
         throttle_msg.data = s_force + d_force + offset   
 
@@ -172,7 +185,7 @@ def main():
     
 #data_sub = rospy.Subscriber('/mavros/global_position/rel_alt', std_msgs.msg.Float64, data_cb ,queue_size=1)
 
-    distance_sub = rospy.Subscriber('/mavros/down/ultrasonic',std_msgs.msg.Int16, ultrasonic_cb, queue_size=1)
+    distance_sub = rospy.Subscriber('/mavros/laser_ranging',std_msgs.msg.Int16, laser_cb, queue_size=1)
 
     thrust_srv = rospy.Service('/mavros/set_thrust', thrust, set_thrust)
 
@@ -224,6 +237,12 @@ def main():
 #########Loop################
     print "mission"
     set_attitude_msg(attitude_pos_msg,1,0,0,0)
+
+    for x in range(0, 50):
+        throttle_pub.publish(std_msgs.msg.Float64(offset))
+        attitude_pos_pub.publish(attitude_pos_msg)
+        rate.sleep() 
+        
     #set_pos_msg(msg,0,0,4)
     #for x in range(0, 50):
     #    local_pos_pub.publish(msg)
@@ -241,9 +260,6 @@ def main():
     msg.pose.position.y = 0
     msg.pose.position.z = 5
 
-#    for x in range(0, 50):
-#        local_pos_pub.publish(msg)
-#        rate.sleep()
 
 ####### need time to land ###################
     resp = set_mode_client.call(0, 'AUTO.LAND')
