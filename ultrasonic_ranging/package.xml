@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <name>ultrasonic_ranging</name>
+  <version>0.0.1</version>
+  <description>
+  This package provides control interface to L298N DCmotor driver.
+  </description>
+  <maintainer email="a7061120@gmail.com">ponsheng</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>pkg_name</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>pkg_name</run_depend>
+
+</package>
