@@ -1,3 +1,0 @@
-<launch>
-    <node pkg="motor_control" type="DCmotor_node.py" name="DCmotor_node" output="screen" />   <!--launch-prefix="sudo" -->
-</launch>

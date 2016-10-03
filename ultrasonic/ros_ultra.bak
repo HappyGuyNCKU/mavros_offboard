@@ -20,7 +20,6 @@ def main():
   GPIO.setup(TRIG,GPIO.OUT)                  #Set pin as GPIO out
   GPIO.setup(ECHO,GPIO.IN)                   #Set pin as GPIO in
 
-
   while not rospy.is_shutdown():
     GPIO.output(TRIG, False)                 #Set TRIG as LOW
     #print "Waitng For Sensor To Settle"

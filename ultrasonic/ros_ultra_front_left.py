@@ -6,8 +6,8 @@ import std_msgs.msg
 
 
 def main():
-  rospy.init_node('ultrasonic', anonymous=True)
-  distance_pub = rospy.Publisher('mavros/ultrasonic',std_msgs.msg.Int16, queue_size=1)
+  rospy.init_node('ultrasonic_front_left', anonymous=True)
+  distance_pub = rospy.Publisher('mavros/down/ultrasonic',std_msgs.msg.Int16, queue_size=1)
   distance_msg = std_msgs.msg.Int16();
   GPIO.setmode(GPIO.BCM)                     #Set GPIO pin numbering 
 

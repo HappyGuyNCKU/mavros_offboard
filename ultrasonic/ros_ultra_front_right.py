@@ -6,14 +6,14 @@ import std_msgs.msg
 
 
 def main():
-  rospy.init_node('ultrasonic', anonymous=True)
-  distance_pub = rospy.Publisher('mavros/ultrasonic',std_msgs.msg.Int16, queue_size=1)
+  rospy.init_node('ultrasonic_front_right', anonymous=True)
+  distance_pub = rospy.Publisher('mavros/front_right/ultrasonic',std_msgs.msg.Int16, queue_size=1)
   distance_msg = std_msgs.msg.Int16();
   GPIO.setmode(GPIO.BCM)                     #Set GPIO pin numbering 
 
   GPIO.setwarnings(False)
-  TRIG = 23                                  #Associate pin 23 to TRIG
-  ECHO = 24                                  #Associate pin 24 to ECHO
+  TRIG = 20                                  #Associate pin 23 to TRIG
+  ECHO = 21                                  #Associate pin 24 to ECHO
 
   print "Distance measurement in progress"
 
