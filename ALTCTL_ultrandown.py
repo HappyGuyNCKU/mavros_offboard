@@ -48,7 +48,7 @@ def state_cb(msg):
     current_state = msg
 
 int_count = 0
-is_land = False
+to_land = False
 
 def INT_handler(signum, frame):
     global int_count
@@ -60,10 +60,11 @@ def INT_handler(signum, frame):
         print ("SetMode state = %r" % resp)    
         sys.exit()
     else:
-        is_land = True
-        
+        global is_land
+        to_land = True
+    int_count = int_count + 1
 
-
+################for global/re_alt ##################
 def data_cb(data_msg):
     pos_z = data_msg.data
     global last_pos_z
@@ -82,6 +83,8 @@ def data_cb(data_msg):
     #    acce_state = 1
     #elif pos_z > 1.45 :    #High
     #    acce_state = -1
+##################################################
+
 
 def quaternion(c,b,a,d):
     roll=math.atan(2*(a*b+c*d)/(a*a-b*b-c*c+d*d))
@@ -107,22 +110,23 @@ def set_attitude():
 
 offset  = 0.62
 land_thrust = 0.605
+target_pos_z = 1.0
+max_thrust = 0.7
+min_thrust = 0.57
+p = 0.15
 
 def laser_cb(msg):
     pos_z = data_msg.data/1000.0
     global last_pos_z
     global throttle_msg
-    target_pos_z = 100
-    max_thrust = 0.85
-    p = 0.15
     s_force = p * (target_pos_z-pos_z)
     d_force =  -1*(pos_z - last_pos_z)*10*math.sqrt(p)
     last_pos_z = pos_z
 
-    if is_land == True :
+    if to_land == True :
         throttle_msg.data = land_thrust
     elif (s_force + d_force +offset) > max_thrust:
-        throttle_msg.data = offset
+        throttle_msg.data = max_thrust
     elif (s_force + d_force +offset) < 0:
         throttle_msg.data = 0
     else :
@@ -239,7 +243,7 @@ def main():
     set_attitude_msg(attitude_pos_msg,1,0,0,0)
 
     for x in range(0, 50):
-        throttle_pub.publish(std_msgs.msg.Float64(offset))
+        throttle_pub.publish(std_msgs.msg.Float64(offset+0.01))
         attitude_pos_pub.publish(attitude_pos_msg)
         rate.sleep() 
         
