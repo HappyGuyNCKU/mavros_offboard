@@ -14,7 +14,7 @@ import signal, os
 
 from math import *
 from mavros_msgs.msg import State
-from mavros_msgs.srv import CommandBool, SetMode
+from mavros_msgs.srv import CommandBool, SetMode ,thrust
 from geometry_msgs.msg import PoseStamped
 from geometry_msgs.msg import TwistStamped 
 from mavros.utils import *
@@ -23,6 +23,7 @@ from tf.transformations import quaternion_from_euler
 
 import signal, os
 import sys
+
 
 ############flight_state##################
 #"Interrupt"
@@ -54,13 +55,14 @@ def INT_handler(signum, frame):
     print ("SetMode state = %r" % resp)    
     sys.exit()
 
+offset  = 0.1
+
 def data_cb(data_msg):
     pos_z = data_msg.data
     global last_pos_z
     global throttle_msg
     target_pos_z = 0.9
-    offset  = 0.3
-    max_thrust = 0.15
+    max_thrust = 0.6
     p = 0.15
     s_force = 0#p * (target_pos_z-pos_z)
     d_force = 0# -1*(pos_z - last_pos_z)*10*math.sqrt(p)
@@ -114,6 +116,11 @@ def set_attitude_msg(attitude_pos_msg,w,x,y,z):
     attitude_pos_msg.pose.orientation.z = z
     attitude_pos_msg.pose.orientation.w = w
 
+def set_thrust(req):
+    global offset
+    offset = req.thrust
+    return True
+
 ###########mission function################
 def mission(msg):
     global flight_state
@@ -154,6 +161,9 @@ def main():
     data_sub = rospy.Subscriber('/mavros/global_position/rel_alt', std_msgs.msg.Float64, data_cb ,queue_size=1)
 
     distance_sub = rospy.Subscriber('/mavros/ultrasonic',std_msgs.msg.Int16, ultrasonci_cb, queue_size=1)
+
+    thrust_srv = rospy.Service('/mavros/set_thrust', thrust, set_thrust)
+
     rate = rospy.Rate(10)   # 10hz
 
     while (current_state and current_state.connected):
