@@ -102,27 +102,29 @@ def set_attitude():
     attitude_pos_pub.publish(attitude_pos_msg)
     rate.sleep()
 
-offset  = 0.63
-land_thrust = 0.605
-target_pos_z = 0.8
+offset  = 0.66
+land_thrust = 0.607
+target_pos_z = 1.0
 max_thrust = 0.7
 min_thrust = 0.57
-p = 0.06
+p = 0.03
 
 def laser_cb(msg):
     pos_z = msg.data/1000.0
     global last_pos_z
     global throttle_msg
     s_force = p * (target_pos_z-pos_z)
-    d_force = 0#  -1*(pos_z - last_pos_z)*10*math.sqrt(p)
+    d_force =  -1*(pos_z - last_pos_z)*math.sqrt(p)
     last_pos_z = pos_z
 
     if to_land == True :
         throttle_msg.data = land_thrust
     elif (s_force + d_force +offset) > max_thrust:
         throttle_msg.data = max_thrust
+        print "max"
     elif (s_force + d_force +offset) < min_thrust:
         throttle_msg.data = min_thrust
+        print "min"
     else :
         throttle_msg.data = s_force + d_force + offset   
 
@@ -238,7 +240,7 @@ def main():
     set_attitude_msg(attitude_pos_msg,1,0,0,0)
 
     for x in range(0, 50):
-        throttle_pub.publish(std_msgs.msg.Float64(0.64))
+        throttle_pub.publish(std_msgs.msg.Float64(0.6))
         attitude_pos_pub.publish(attitude_pos_msg)
         rate.sleep() 
         
