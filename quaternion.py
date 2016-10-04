@@ -6,6 +6,12 @@ class Quaternion:
 	y=0
 	z=0
 
+    q_shift_left = Quaternion()
+    q_shift_left = quaternion(1,0,0,5)
+    q_shift_right = Quaternion() 
+    q_shift_right = quaternion(1,0,0,-5) 
+
+
 	def multipy(self,local):
 		#(Q1 * Q2).w = (w1w2 - x1x2 - y1y2 - z1z2)
 		#(Q1 * Q2).x = (w1x2 + x1w2 + y1z2 - z1y2)

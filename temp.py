@@ -62,7 +62,7 @@ def INT_handler(signum, frame):
     else:
         global to_land
         global throttle_msg
-        throttle_msg.data = 0.605
+        throttle_msg = 0.605
         print "to land"
         to_land = True
     int_count = int_count + 1
@@ -74,9 +74,9 @@ def data_cb(data_msg):
     global throttle_msg
     target_pos_z = 7.6
     max_thrust = 0.85
-    p = 0.015
+    p = 0.15
     s_force = p * (target_pos_z-pos_z)
-    d_force =  0#-1*(pos_z - last_pos_z)*10*math.sqrt(p)
+    d_force =  -1*(pos_z - last_pos_z)*10*math.sqrt(p)
     last_pos_z = pos_z
     if (s_force + d_force +offset) > max_thrust:
         throttle_msg.data = offset
@@ -102,27 +102,27 @@ def set_attitude():
     attitude_pos_pub.publish(attitude_pos_msg)
     rate.sleep()
 
-offset  = 0.63
+offset  = 0.62
 land_thrust = 0.605
 target_pos_z = 0.8
 max_thrust = 0.7
 min_thrust = 0.57
-p = 0.06
+p = 0.15
 
 def laser_cb(msg):
-    pos_z = msg.data/1000.0
+    pos_z = data_msg.data/1000.0
     global last_pos_z
     global throttle_msg
     s_force = p * (target_pos_z-pos_z)
-    d_force = 0#  -1*(pos_z - last_pos_z)*10*math.sqrt(p)
+    d_force =  -1*(pos_z - last_pos_z)*10*math.sqrt(p)
     last_pos_z = pos_z
 
     if to_land == True :
         throttle_msg.data = land_thrust
     elif (s_force + d_force +offset) > max_thrust:
         throttle_msg.data = max_thrust
-    elif (s_force + d_force +offset) < min_thrust:
-        throttle_msg.data = min_thrust
+    elif (s_force + d_force +offset) < 0:
+        throttle_msg.data = 0
     else :
         throttle_msg.data = s_force + d_force + offset   
 
@@ -183,7 +183,7 @@ def main():
     
 #data_sub = rospy.Subscriber('/mavros/global_position/rel_alt', std_msgs.msg.Float64, data_cb ,queue_size=1)
 
-    distance_sub = rospy.Subscriber('/mavros/down/ultrasonic',std_msgs.msg.Int16, laser_cb, queue_size=1)
+#    distance_sub = rospy.Subscriber('/mavros/laser_ranging',std_msgs.msg.Int16, laser_cb, queue_size=1)
 
     thrust_srv = rospy.Service('/mavros/set_thrust', thrust, set_thrust)
 
@@ -206,7 +206,7 @@ def main():
         )
 
     throttle_msg = std_msgs.msg.Float64();
-    throttle_msg.data = 0.64
+    throttle_msg.data = 0.63
 
     # Set the signal handler
     signal.signal(signal.SIGINT, INT_handler)
