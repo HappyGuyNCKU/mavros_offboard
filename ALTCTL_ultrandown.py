@@ -20,6 +20,7 @@ from geometry_msgs.msg import TwistStamped
 from mavros.utils import *
 from mavros import setpoint as SP
 from tf.transformations import quaternion_from_euler
+from quaternion import Quaternion
 
 import signal, os
 import sys
@@ -57,7 +58,7 @@ def INT_handler(signum, frame):
     
         print 'Signal handler called with signal', signum
         resp = set_mode_client.call(0, 'AUTO.LAND')
-        print ("SetMode state = %r" % resp)    
+        print ("SetMode AUTO.LAND  state = %r" % resp)    
         sys.exit()
     else:
         global to_land
@@ -66,6 +67,8 @@ def INT_handler(signum, frame):
         print "to land"
         to_land = True
     int_count = int_count + 1
+        #resp = set_mode_client.call(0, 'AUTO.LOITER')
+        #print ("SetMode AUTO.LOITER  state = %r" % resp) 
 
 ################for global/re_alt ##################
 def data_cb(data_msg):
@@ -138,11 +141,11 @@ def set_pos_msg(msg,x,y,z):
     msg.pose.position.y = y
     msg.pose.position.z = z
 
-def set_attitude_msg(attitude_pos_msg,w,x,y,z):
-    attitude_pos_msg.pose.orientation.x = x
-    attitude_pos_msg.pose.orientation.y = y
-    attitude_pos_msg.pose.orientation.z = z
-    attitude_pos_msg.pose.orientation.w = w
+def set_attitude_msg(attitude_pos_msg,q):
+    attitude_pos_msg.pose.orientation.x = q.x
+    attitude_pos_msg.pose.orientation.y = q.y
+    attitude_pos_msg.pose.orientation.z = q.z
+    attitude_pos_msg.pose.orientation.w = q.w
 
 def set_thrust(req):
     global offset
@@ -216,6 +219,7 @@ def main():
     # Set the signal handler
     signal.signal(signal.SIGINT, INT_handler)
 
+    q = Quaternion()
 ################### Take off#####
 
     set_pos_msg(msg,0,0,2)
@@ -240,7 +244,7 @@ def main():
     flight_state = "ALT_CTL"
 #########Loop################
     print "takeoff"
-    set_attitude_msg(attitude_pos_msg,1,0,0,0)
+    set_attitude_msg(attitude_pos_msg,q)
 
     for x in range(0, 50):
         throttle_pub.publish(std_msgs.msg.Float64(0.6))
@@ -252,11 +256,15 @@ def main():
     #    local_pos_pub.publish(msg)
     #    rate.sleep()
     print "mission"
+    attctl_count = 0
     while not rospy.is_shutdown():
         mission(msg)
         if flight_state=="Interrupt":
             print "Interrupt by User"
             break
+        attctl_count = attctl_count +1
+        mod = attctl_count % 200
+
 
 ####### Landing #######
     print("landing")
