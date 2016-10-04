@@ -1,16 +1,56 @@
 import math
 
+class local_q:
+	w=1
+	x=0
+	y=0
+	z=0
+
+	def __init__(self,i=0,j=0,k=0,degree=0):
+		mag = math.sqrt(i*i+j*j+k*k)
+		half_t = (math.pi/2.0/180.0*degree)
+		self.w = math.cos(half_t)
+		self.x = i/mag*math.sin(half_t)
+		self.y = j/mag*math.sin(half_t)
+		self.z = k/mag*math.sin(half_t)
+
+	def printq(self):
+		print self.w        
+		print self.x
+		print self.y
+		print self.z
+
+
 class Quaternion:
 	w=1
 	x=0
 	y=0
 	z=0
 
-    q_shift_left = Quaternion()
-    q_shift_left = quaternion(1,0,0,5)
-    q_shift_right = Quaternion() 
-    q_shift_right = quaternion(1,0,0,-5) 
+	q_shift_left = local_q(1,0,0,-5)
+	q_shift_right = local_q(1,0,0,5) 
+	q_forward = local_q(0,1,0,-5)
+	q_backward = local_q(0,1,0,5)
+	q_rotate_cw = local_q(0,0,1,90)
+	q_rotate_cc = local_q(0,0,1,-90)
 
+	def shift_left(self):
+		self.multipy(self.q_shift_left)
+
+	def shift_right(self):
+		self.multipy(self.q_shift_right)
+
+	def forward(self):
+		self.multipy(self.q_forward)
+
+	def backward(self):
+		self.multipy(self.q_backward)
+
+	def rotate_cw(self):
+		self.multipy(self.q_rotate_cw)
+
+	def rotate_cc(self):
+		self.multipy(self.q_rotate_cc)
 
 	def multipy(self,local):
 		#(Q1 * Q2).w = (w1w2 - x1x2 - y1y2 - z1z2)
@@ -27,7 +67,7 @@ class Quaternion:
 		self.x = temp.x
 		self.y = temp.y
 		self.z = temp.z
-		return self
+		self.printq()
 
 	def quaternion(self,i,j,k,degree):
 		mag = math.sqrt(i*i+j*j+k*k)
@@ -39,7 +79,6 @@ class Quaternion:
 		self.y = j/mag*math.sin(half_t)
 		self.z = k/mag*math.sin(half_t)
 		self.printq()	
-		return self
 	
 	def printq(self):
 		print self.w		
@@ -47,3 +86,6 @@ class Quaternion:
 		print self.y
 		print self.z
 		return self
+
+
+	
