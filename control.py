@@ -44,6 +44,7 @@ last_pos_z = 1.5
 flight_state = "None"
 local_pos_pub = None
 set_mode_client = None
+q = Quaternion()
 
 def state_cb(msg):
     current_state = msg
@@ -71,24 +72,6 @@ def INT_handler(signum, frame):
         #print ("SetMode AUTO.LOITER  state = %r" % resp) 
 
 ################for global/re_alt ##################
-def data_cb(data_msg):
-    pos_z = data_msg.data
-    global last_pos_z
-    global throttle_msg
-    target_pos_z = 7.6
-    max_thrust = 0.85
-    p = 0.015
-    s_force = p * (target_pos_z-pos_z)
-    d_force =  0#-1*(pos_z - last_pos_z)*10*math.sqrt(p)
-    last_pos_z = pos_z
-    if (s_force + d_force +offset) > max_thrust:
-        throttle_msg.data = offset
-    else :
-        throttle_msg.data = s_force + d_force + offset
-    #if pos_z <  1.65 :   #Low
-    #    acce_state = 1
-    #elif pos_z > 1.45 :    #High
-    #    acce_state = -1
 ##################################################
 
 
@@ -136,6 +119,31 @@ def laser_cb(msg):
 
 
 
+thresthold = 1500
+####left 001
+####right 010
+####front 100
+
+obstacle_state = 0
+def laser_front_cb(msg):
+    if msg.data < thresthold:
+	    q.set_q(q.q_backward)
+    else:
+        q.set_q(q.q_forward)
+
+
+def laser_right_cb(msg):
+    if msg.data < thresthold:
+        q.set_q(q.q_shift_left)
+    else:
+        q.set_q(q.q_stable)
+
+def laser_left_cb(msg):
+    if msg.data < thresthold:
+        q.set_q(q.q_shift_right)
+    else:
+        q.set_q(q.q_stable)
+
 def set_pos_msg(msg,x,y,z):
     msg.pose.position.x = x
     msg.pose.position.y = y
@@ -161,6 +169,7 @@ def mission(msg):
         local_pos_pub.publish(msg)
         rate.sleep()
     elif flight_state == "ALT_CTL":
+        
         set_attitude()
     elif flight_state == "OBSTACLE_AVOID":
         set_attitude(1,0.533,"",0.99144,-0.13053,0,0)
@@ -178,6 +187,7 @@ def main():
     global flight_state
     global local_pos_pub
     global set_mode_client
+    global q
     rospy.init_node('rosmav_test_client', anonymous=True)
     mavros.set_namespace()  # initialize mavros module with default namespace
     #state_sub = rospy.Subscriber('mavros/state', State, state_cb, queue_size=10)
@@ -191,7 +201,14 @@ def main():
     
 #data_sub = rospy.Subscriber('/mavros/global_position/rel_alt', std_msgs.msg.Float64, data_cb ,queue_size=1)
 
-    distance_sub = rospy.Subscriber('/mavros/down/ultrasonic',std_msgs.msg.Int16, laser_cb, queue_size=1)
+    distance_sub = rospy.Subscriber('/mavros/ultrasonic/down',std_msgs.msg.Int16, laser_cb, queue_size=1)
+
+    distance_left_sub = rospy.Subscriber('/mavros/ultrasonic/left',std_msgs.msg.Int16, laser_left_cb, queue_size=1)
+
+    distance_right_sub = rospy.Subscriber('/mavros/ultrasonic/right',std_msgs.msg.Int16, laser_right_cb, queue_size=1)
+
+    distance_front_sub = rospy.Subscriber('/mavros/ultrasonic/front',std_msgs.msg.Int16, laser_front_cb, queue_size=1)
+
 
     thrust_srv = rospy.Service('/mavros/set_thrust', thrust, set_thrust)
 
@@ -219,7 +236,6 @@ def main():
     # Set the signal handler
     signal.signal(signal.SIGINT, INT_handler)
 
-    q = Quaternion()
     q_stable = Quaternion()
 ################### Take off#####
 
@@ -257,41 +273,15 @@ def main():
     #    local_pos_pub.publish(msg)
     #    rate.sleep()
     print "mission"
-    attctl_count = 0
     while not rospy.is_shutdown():
         mission(msg)
         if flight_state=="Interrupt":
             print "Interrupt by User"
             break
-        attctl_count = attctl_count +1
-        mod = attctl_count % 250
-        if mod == 30:
-            q.shift_left()
-            print "left"
-        elif mod == 40:
-            q.shift_right()
-            print "back"
-        elif mod == 70:
-            q.shift_right()
-            print "right"
-        elif mod == 80:
-            q.shift_left()
-            print "back"
-        elif mod == 130:
-            q.forward()
-            print "forward"
-        elif mod == 140:
-            q.backward()
-            print "back"
-        elif mod == 170:
-            q.backward()
-            print "backward"
-        elif mod == 180:
-            q.forward()
-            print "back"
-        elif mod == 230:
-            q.rotate_cw()
-            print "rotate_cw"
+
+
+
+
         if to_land == True:
             set_attitude_msg(attitude_pos_msg,q_stable)
         else:

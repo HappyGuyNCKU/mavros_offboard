@@ -26,15 +26,23 @@ class Quaternion:
 	x=0
 	y=0
 	z=0
+	degree = 0
 
 	angle = 5
-
+    
+    q_stable = local_q(0,0,0,0)
 	q_shift_left = local_q(1,0,0,-angle)
 	q_shift_right = local_q(1,0,0,angle) 
-	q_forward = local_q(0,1,0,-angle)
-	q_backward = local_q(0,1,0,angle)
+	q_forward = local_q(0,1,0,angle)
+	q_backward = local_q(0,1,0,-angle)
 	q_rotate_cw = local_q(0,0,1,90)
 	q_rotate_cc = local_q(0,0,1,-90)
+
+    def set_q(self,q_local):
+        self.w = q_local.w
+        self.x = q_local.x
+        self.y = q_local.y
+        self.z = q_local.z     
 
 	def shift_left(self):
 		self.multipy(self.q_shift_left)
