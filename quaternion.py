@@ -27,8 +27,10 @@ class Quaternion:
 	y=0
 	z=0
 
-	q_shift_left = local_q(1,0,0,-5)
-	q_shift_right = local_q(1,0,0,5) 
+	angle = 5
+
+	q_shift_left = local_q(1,0,0,-angle)
+	q_shift_right = local_q(1,0,0,angle) 
 	q_forward = local_q(0,1,0,-5)
 	q_backward = local_q(0,1,0,5)
 	q_rotate_cw = local_q(0,0,1,90)
@@ -67,7 +69,7 @@ class Quaternion:
 		self.x = temp.x
 		self.y = temp.y
 		self.z = temp.z
-		self.printq()
+#self.printq()
 
 	def quaternion(self,i,j,k,degree):
 		mag = math.sqrt(i*i+j*j+k*k)

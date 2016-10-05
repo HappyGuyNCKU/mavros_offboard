@@ -105,13 +105,13 @@ def set_attitude():
     attitude_pos_pub.publish(attitude_pos_msg)
     rate.sleep()
 
-offset  = 0.63 #0.66
-land_thrust = 0.607
+offset  = 0.64 #0.66
+land_thrust = 0.625
 target_pos_z = 1.0
 max_thrust = 0.7
 min_thrust = 0.57
 p = 0.03
-i = 0.005
+i = 0.001
 i_force = 0
 
 def laser_cb(msg):
@@ -263,8 +263,20 @@ def main():
             print "Interrupt by User"
             break
         attctl_count = attctl_count +1
-        mod = attctl_count % 200
-
+        mod = attctl_count % 100
+        if mod == 30:
+            q.shift_left()
+            print "left"
+        elif mod == 40:
+            q.shift_right()
+            print "back"
+        elif mod == 70:
+            q.shift_left()
+            print "right"
+        elif mod == 80:
+            q.shift_right()
+            print "back"
+        set_attitude_msg(attitude_pos_msg,q)
 
 ####### Landing #######
     print("landing")
