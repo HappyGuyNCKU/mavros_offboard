@@ -1,0 +1,2715 @@
+header: 
+  seq: 26350
+  stamp: 
+    secs: 1475639022
+    nsecs: 462012736
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211497
+altitude: 45.308
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26351
+  stamp: 
+    secs: 1475639022
+    nsecs: 561910080
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211496
+altitude: 45.295
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26352
+  stamp: 
+    secs: 1475639022
+    nsecs: 661764672
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211497
+altitude: 45.314
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26353
+  stamp: 
+    secs: 1475639022
+    nsecs: 761940288
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211497
+altitude: 45.304
+position_covariance: [0.8099999570846563, 0.0, 0.0, 0.0, 0.8099999570846563, 0.0, 0.0, 0.0, 3.2399998283386253]
+position_covariance_type: 1
+---
+header: 
+  seq: 26354
+  stamp: 
+    secs: 1475639022
+    nsecs: 863156608
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.22115
+altitude: 45.316
+position_covariance: [0.8099999570846563, 0.0, 0.0, 0.0, 0.8099999570846563, 0.0, 0.0, 0.0, 3.2399998283386253]
+position_covariance_type: 1
+---
+header: 
+  seq: 26355
+  stamp: 
+    secs: 1475639022
+    nsecs: 973067264
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965692
+longitude: 120.2211502
+altitude: 45.302
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26356
+  stamp: 
+    secs: 1475639023
+    nsecs:  72847104
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211505
+altitude: 45.296
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26357
+  stamp: 
+    secs: 1475639023
+    nsecs: 173021184
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211505
+altitude: 45.29
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26358
+  stamp: 
+    secs: 1475639023
+    nsecs: 272707328
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965692
+longitude: 120.2211505
+altitude: 45.289
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26359
+  stamp: 
+    secs: 1475639023
+    nsecs: 372690944
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211505
+altitude: 45.278
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26360
+  stamp: 
+    secs: 1475639023
+    nsecs: 472813312
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211506
+altitude: 45.263
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26361
+  stamp: 
+    secs: 1475639023
+    nsecs: 582706560
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211506
+altitude: 45.249
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26362
+  stamp: 
+    secs: 1475639023
+    nsecs: 682270080
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965692
+longitude: 120.2211506
+altitude: 45.245
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26363
+  stamp: 
+    secs: 1475639023
+    nsecs: 782498432
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211506
+altitude: 45.253
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26364
+  stamp: 
+    secs: 1475639023
+    nsecs: 883432896
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211506
+altitude: 45.247
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26365
+  stamp: 
+    secs: 1475639023
+    nsecs: 983596224
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211507
+altitude: 45.238
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26366
+  stamp: 
+    secs: 1475639024
+    nsecs:  83504576
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211509
+altitude: 45.237
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26367
+  stamp: 
+    secs: 1475639024
+    nsecs: 193475392
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965692
+longitude: 120.221151
+altitude: 45.219
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26368
+  stamp: 
+    secs: 1475639024
+    nsecs: 293094976
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965691
+longitude: 120.2211511
+altitude: 45.199
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26369
+  stamp: 
+    secs: 1475639024
+    nsecs: 403264448
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965691
+longitude: 120.221151
+altitude: 45.212
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26370
+  stamp: 
+    secs: 1475639024
+    nsecs: 503177152
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965691
+longitude: 120.2211509
+altitude: 45.216
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26371
+  stamp: 
+    secs: 1475639024
+    nsecs: 602968768
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211509
+altitude: 45.229
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26372
+  stamp: 
+    secs: 1475639024
+    nsecs: 703686336
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211508
+altitude: 45.223
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26373
+  stamp: 
+    secs: 1475639024
+    nsecs: 803228608
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211509
+altitude: 45.231
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26374
+  stamp: 
+    secs: 1475639024
+    nsecs: 904440832
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211509
+altitude: 45.225
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26375
+  stamp: 
+    secs: 1475639025
+    nsecs:   4984576
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211513
+altitude: 45.236
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26376
+  stamp: 
+    secs: 1475639025
+    nsecs: 105225472
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211514
+altitude: 45.234
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26377
+  stamp: 
+    secs: 1475639025
+    nsecs: 204617216
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965689
+longitude: 120.2211517
+altitude: 45.233
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26378
+  stamp: 
+    secs: 1475639025
+    nsecs: 314744448
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965689
+longitude: 120.2211518
+altitude: 45.21
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26379
+  stamp: 
+    secs: 1475639025
+    nsecs: 415095680
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965689
+longitude: 120.2211519
+altitude: 45.205
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26380
+  stamp: 
+    secs: 1475639025
+    nsecs: 515013504
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965689
+longitude: 120.2211519
+altitude: 45.192
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26381
+  stamp: 
+    secs: 1475639025
+    nsecs: 614968448
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965688
+longitude: 120.2211517
+altitude: 45.206
+position_covariance: [0.722500040531159, 0.0, 0.0, 0.0, 0.722500040531159, 0.0, 0.0, 0.0, 2.890000162124636]
+position_covariance_type: 1
+---
+header: 
+  seq: 26382
+  stamp: 
+    secs: 1475639025
+    nsecs: 715111296
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965688
+longitude: 120.2211516
+altitude: 45.19
+position_covariance: [0.722500040531159, 0.0, 0.0, 0.0, 0.722500040531159, 0.0, 0.0, 0.0, 2.890000162124636]
+position_covariance_type: 1
+---
+header: 
+  seq: 26383
+  stamp: 
+    secs: 1475639025
+    nsecs: 824999936
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965688
+longitude: 120.2211515
+altitude: 45.181
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26384
+  stamp: 
+    secs: 1475639025
+    nsecs: 925993024
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965688
+longitude: 120.2211515
+altitude: 45.171
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26385
+  stamp: 
+    secs: 1475639026
+    nsecs:  25811520
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965687
+longitude: 120.2211519
+altitude: 45.147
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26386
+  stamp: 
+    secs: 1475639026
+    nsecs: 125903168
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965687
+longitude: 120.2211519
+altitude: 45.108
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26387
+  stamp: 
+    secs: 1475639026
+    nsecs: 225870656
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965686
+longitude: 120.2211522
+altitude: 45.098
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26388
+  stamp: 
+    secs: 1475639026
+    nsecs: 325693760
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965686
+longitude: 120.2211523
+altitude: 45.08
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26389
+  stamp: 
+    secs: 1475639026
+    nsecs: 435719872
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965687
+longitude: 120.2211524
+altitude: 45.07
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26390
+  stamp: 
+    secs: 1475639026
+    nsecs: 535790784
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965688
+longitude: 120.2211524
+altitude: 45.047
+position_covariance: [0.6083999553680428, 0.0, 0.0, 0.0, 0.6083999553680428, 0.0, 0.0, 0.0, 2.4335998214721712]
+position_covariance_type: 1
+---
+header: 
+  seq: 26391
+  stamp: 
+    secs: 1475639026
+    nsecs: 635736000
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965689
+longitude: 120.2211523
+altitude: 45.032
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26392
+  stamp: 
+    secs: 1475639026
+    nsecs: 735767744
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965689
+longitude: 120.2211523
+altitude: 45.007
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26393
+  stamp: 
+    secs: 1475639026
+    nsecs: 846684032
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211523
+altitude: 45.018
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26394
+  stamp: 
+    secs: 1475639026
+    nsecs: 946882944
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211523
+altitude: 44.999
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26395
+  stamp: 
+    secs: 1475639027
+    nsecs:  46858368
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211526
+altitude: 45.008
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26396
+  stamp: 
+    secs: 1475639027
+    nsecs: 147054976
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211526
+altitude: 44.999
+position_covariance: [0.656100003862381, 0.0, 0.0, 0.0, 0.656100003862381, 0.0, 0.0, 0.0, 2.624400015449524]
+position_covariance_type: 1
+---
+header: 
+  seq: 26397
+  stamp: 
+    secs: 1475639027
+    nsecs: 246905472
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211529
+altitude: 45.028
+position_covariance: [0.792099974536896, 0.0, 0.0, 0.0, 0.792099974536896, 0.0, 0.0, 0.0, 3.168399898147584]
+position_covariance_type: 1
+---
+header: 
+  seq: 26398
+  stamp: 
+    secs: 1475639027
+    nsecs: 346860416
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965691
+longitude: 120.2211529
+altitude: 45.018
+position_covariance: [0.792099974536896, 0.0, 0.0, 0.0, 0.792099974536896, 0.0, 0.0, 0.0, 3.168399898147584]
+position_covariance_type: 1
+---
+header: 
+  seq: 26399
+  stamp: 
+    secs: 1475639027
+    nsecs: 446844288
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211529
+altitude: 45.03
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26400
+  stamp: 
+    secs: 1475639027
+    nsecs: 556914688
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211528
+altitude: 45.028
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26401
+  stamp: 
+    secs: 1475639027
+    nsecs: 656977664
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211529
+altitude: 45.036
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26402
+  stamp: 
+    secs: 1475639027
+    nsecs: 757094144
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211529
+altitude: 45.026
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26403
+  stamp: 
+    secs: 1475639027
+    nsecs: 857738304
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.221153
+altitude: 45.043
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26404
+  stamp: 
+    secs: 1475639027
+    nsecs: 967966400
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.221153
+altitude: 45.051
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26405
+  stamp: 
+    secs: 1475639028
+    nsecs:  68064192
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211529
+altitude: 45.064
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26406
+  stamp: 
+    secs: 1475639028
+    nsecs: 167875264
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211528
+altitude: 45.058
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26407
+  stamp: 
+    secs: 1475639028
+    nsecs: 268091328
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211529
+altitude: 45.082
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26408
+  stamp: 
+    secs: 1475639028
+    nsecs: 368062144
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211528
+altitude: 45.082
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26409
+  stamp: 
+    secs: 1475639028
+    nsecs: 467988928
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.221153
+altitude: 45.101
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26410
+  stamp: 
+    secs: 1475639028
+    nsecs: 578064704
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211531
+altitude: 45.106
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26411
+  stamp: 
+    secs: 1475639028
+    nsecs: 677975616
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211532
+altitude: 45.121
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26412
+  stamp: 
+    secs: 1475639028
+    nsecs: 779120512
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211532
+altitude: 45.122
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26413
+  stamp: 
+    secs: 1475639028
+    nsecs: 879120512
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211533
+altitude: 45.127
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26414
+  stamp: 
+    secs: 1475639028
+    nsecs: 978985344
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211534
+altitude: 45.133
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26415
+  stamp: 
+    secs: 1475639029
+    nsecs:  79124096
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211535
+altitude: 45.134
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26416
+  stamp: 
+    secs: 1475639029
+    nsecs: 179001216
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211537
+altitude: 45.13
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26417
+  stamp: 
+    secs: 1475639029
+    nsecs: 278942848
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211539
+altitude: 45.124
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26418
+  stamp: 
+    secs: 1475639029
+    nsecs: 378871168
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.221154
+altitude: 45.136
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26419
+  stamp: 
+    secs: 1475639029
+    nsecs: 478750336
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965691
+longitude: 120.2211541
+altitude: 45.141
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26420
+  stamp: 
+    secs: 1475639029
+    nsecs: 579646400
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965691
+longitude: 120.2211542
+altitude: 45.14
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26421
+  stamp: 
+    secs: 1475639029
+    nsecs: 690052928
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965691
+longitude: 120.2211543
+altitude: 45.15
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26422
+  stamp: 
+    secs: 1475639029
+    nsecs: 789933888
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965692
+longitude: 120.2211544
+altitude: 45.172
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26423
+  stamp: 
+    secs: 1475639029
+    nsecs: 889957184
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965692
+longitude: 120.2211544
+altitude: 45.169
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26424
+  stamp: 
+    secs: 1475639029
+    nsecs: 999869120
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965692
+longitude: 120.2211547
+altitude: 45.169
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26425
+  stamp: 
+    secs: 1475639030
+    nsecs:  99861696
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965692
+longitude: 120.2211548
+altitude: 45.164
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26426
+  stamp: 
+    secs: 1475639030
+    nsecs: 200053952
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965692
+longitude: 120.221155
+altitude: 45.154
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26427
+  stamp: 
+    secs: 1475639030
+    nsecs: 299951808
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965692
+longitude: 120.2211551
+altitude: 45.137
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26428
+  stamp: 
+    secs: 1475639030
+    nsecs: 399849408
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211552
+altitude: 45.15
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26429
+  stamp: 
+    secs: 1475639030
+    nsecs: 500022208
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211553
+altitude: 45.146
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26430
+  stamp: 
+    secs: 1475639030
+    nsecs: 609820992
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211555
+altitude: 45.147
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26431
+  stamp: 
+    secs: 1475639030
+    nsecs: 710741120
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211555
+altitude: 45.135
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26432
+  stamp: 
+    secs: 1475639030
+    nsecs: 810749056
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211558
+altitude: 45.133
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26433
+  stamp: 
+    secs: 1475639030
+    nsecs: 910758272
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211558
+altitude: 45.126
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26434
+  stamp: 
+    secs: 1475639031
+    nsecs:  20963328
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211562
+altitude: 45.137
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26435
+  stamp: 
+    secs: 1475639031
+    nsecs: 120965632
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211563
+altitude: 45.132
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26436
+  stamp: 
+    secs: 1475639031
+    nsecs: 220925952
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211566
+altitude: 45.148
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26437
+  stamp: 
+    secs: 1475639031
+    nsecs: 321191680
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211567
+altitude: 45.146
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26438
+  stamp: 
+    secs: 1475639031
+    nsecs: 421178368
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211569
+altitude: 45.167
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26439
+  stamp: 
+    secs: 1475639031
+    nsecs: 530892672
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.221157
+altitude: 45.161
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26440
+  stamp: 
+    secs: 1475639031
+    nsecs: 731769792
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211574
+altitude: 45.173
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26441
+  stamp: 
+    secs: 1475639031
+    nsecs: 831769792
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211578
+altitude: 45.189
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26442
+  stamp: 
+    secs: 1475639031
+    nsecs: 931946432
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211579
+altitude: 45.197
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26443
+  stamp: 
+    secs: 1475639032
+    nsecs:  32114880
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211582
+altitude: 45.217
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26444
+  stamp: 
+    secs: 1475639032
+    nsecs: 131754432
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211583
+altitude: 45.223
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26445
+  stamp: 
+    secs: 1475639032
+    nsecs: 231716032
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211587
+altitude: 45.238
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26446
+  stamp: 
+    secs: 1475639032
+    nsecs: 331631552
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211589
+altitude: 45.226
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26447
+  stamp: 
+    secs: 1475639032
+    nsecs: 431660736
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211591
+altitude: 45.241
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26448
+  stamp: 
+    secs: 1475639032
+    nsecs: 541492032
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211592
+altitude: 45.225
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26449
+  stamp: 
+    secs: 1475639032
+    nsecs: 642607744
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211595
+altitude: 45.225
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26450
+  stamp: 
+    secs: 1475639032
+    nsecs: 742575232
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211596
+altitude: 45.217
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26451
+  stamp: 
+    secs: 1475639032
+    nsecs: 842596224
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965696
+longitude: 120.2211601
+altitude: 45.224
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26452
+  stamp: 
+    secs: 1475639032
+    nsecs: 942805888
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211602
+altitude: 45.217
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26453
+  stamp: 
+    secs: 1475639033
+    nsecs:  52428288
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211605
+altitude: 45.235
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26454
+  stamp: 
+    secs: 1475639033
+    nsecs: 152426496
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211605
+altitude: 45.219
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26455
+  stamp: 
+    secs: 1475639033
+    nsecs: 252777728
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211607
+altitude: 45.223
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26456
+  stamp: 
+    secs: 1475639033
+    nsecs: 352513024
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211608
+altitude: 45.21
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26457
+  stamp: 
+    secs: 1475639033
+    nsecs: 452216832
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.221161
+altitude: 45.231
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26458
+  stamp: 
+    secs: 1475639033
+    nsecs: 552389376
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.221161
+altitude: 45.23
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26459
+  stamp: 
+    secs: 1475639033
+    nsecs: 652508160
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211613
+altitude: 45.25
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26460
+  stamp: 
+    secs: 1475639033
+    nsecs: 763533760
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211614
+altitude: 45.242
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26461
+  stamp: 
+    secs: 1475639033
+    nsecs: 863246528
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211617
+altitude: 45.255
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26462
+  stamp: 
+    secs: 1475639033
+    nsecs: 963517376
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211617
+altitude: 45.255
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26463
+  stamp: 
+    secs: 1475639034
+    nsecs:  73363008
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211621
+altitude: 45.282
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26464
+  stamp: 
+    secs: 1475639034
+    nsecs: 173302848
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211622
+altitude: 45.277
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26465
+  stamp: 
+    secs: 1475639034
+    nsecs: 273079104
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211625
+altitude: 45.281
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26466
+  stamp: 
+    secs: 1475639034
+    nsecs: 372977216
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211626
+altitude: 45.28
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26467
+  stamp: 
+    secs: 1475639034
+    nsecs: 473079104
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211628
+altitude: 45.289
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26468
+  stamp: 
+    secs: 1475639034
+    nsecs: 582805184
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.221163
+altitude: 45.289
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26469
+  stamp: 
+    secs: 1475639034
+    nsecs: 682997184
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211632
+altitude: 45.29
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26470
+  stamp: 
+    secs: 1475639034
+    nsecs: 782990272
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211635
+altitude: 45.304
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26471
+  stamp: 
+    secs: 1475639034
+    nsecs: 885059328
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211637
+altitude: 45.298
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26472
+  stamp: 
+    secs: 1475639034
+    nsecs: 984138240
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211638
+altitude: 45.297
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26473
+  stamp: 
+    secs: 1475639035
+    nsecs:  84534016
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.221164
+altitude: 45.297
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26474
+  stamp: 
+    secs: 1475639035
+    nsecs: 185502976
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211642
+altitude: 45.301
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26475
+  stamp: 
+    secs: 1475639035
+    nsecs: 294396288
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211644
+altitude: 45.307
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26476
+  stamp: 
+    secs: 1475639035
+    nsecs: 395304832
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211646
+altitude: 45.301
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26477
+  stamp: 
+    secs: 1475639035
+    nsecs: 495001984
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211647
+altitude: 45.295
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26478
+  stamp: 
+    secs: 1475639035
+    nsecs: 594890624
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211649
+altitude: 45.297
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26479
+  stamp: 
+    secs: 1475639035
+    nsecs: 694954624
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211651
+altitude: 45.292
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26480
+  stamp: 
+    secs: 1475639035
+    nsecs: 794768256
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211652
+altitude: 45.279
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26481
+  stamp: 
+    secs: 1475639035
+    nsecs: 895792832
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211654
+altitude: 45.269
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26482
+  stamp: 
+    secs: 1475639036
+    nsecs:   5942848
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211657
+altitude: 45.247
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26483
+  stamp: 
+    secs: 1475639036
+    nsecs: 105856064
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211659
+altitude: 45.227
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26484
+  stamp: 
+    secs: 1475639036
+    nsecs: 205745728
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211663
+altitude: 45.212
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26485
+  stamp: 
+    secs: 1475639036
+    nsecs: 305664832
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211665
+altitude: 45.197
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26486
+  stamp: 
+    secs: 1475639036
+    nsecs: 415702208
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211667
+altitude: 45.201
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26487
+  stamp: 
+    secs: 1475639036
+    nsecs: 515905216
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211669
+altitude: 45.203
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26488
+  stamp: 
+    secs: 1475639036
+    nsecs: 615905216
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211672
+altitude: 45.209
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26489
+  stamp: 
+    secs: 1475639036
+    nsecs: 716953344
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965696
+longitude: 120.2211674
+altitude: 45.193
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26490
+  stamp: 
+    secs: 1475639036
+    nsecs: 816817920
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965697
+longitude: 120.2211678
+altitude: 45.189
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26491
+  stamp: 
+    secs: 1475639036
+    nsecs: 926822528
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965697
+longitude: 120.2211679
+altitude: 45.179
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26492
+  stamp: 
+    secs: 1475639037
+    nsecs:  26828928
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965697
+longitude: 120.2211683
+altitude: 45.193
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26493
+  stamp: 
+    secs: 1475639037
+    nsecs: 126711424
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965697
+longitude: 120.2211684
+altitude: 45.181
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26494
+  stamp: 
+    secs: 1475639037
+    nsecs: 236782848
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965697
+longitude: 120.2211688
+altitude: 45.2
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26495
+  stamp: 
+    secs: 1475639037
+    nsecs: 336820224
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965697
+longitude: 120.2211689
+altitude: 45.197
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26496
+  stamp: 
+    secs: 1475639037
+    nsecs: 436922880
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965697
+longitude: 120.2211693
+altitude: 45.217
+position_covariance: [0.5775999855041505, 0.0, 0.0, 0.0, 0.5775999855041505, 0.0, 0.0, 0.0, 2.310399942016602]
+position_covariance_type: 1
+---
+header: 
+  seq: 26497
+  stamp: 
+    secs: 1475639037
+    nsecs: 546731904
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965697
+longitude: 120.2211694
+altitude: 45.211
+position_covariance: [0.5775999855041505, 0.0, 0.0, 0.0, 0.5775999855041505, 0.0, 0.0, 0.0, 2.310399942016602]
+position_covariance_type: 1
+---
+header: 
+  seq: 26498
+  stamp: 
+    secs: 1475639037
+    nsecs: 646539136
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965697
+longitude: 120.2211699
+altitude: 45.224
+position_covariance: [0.5775999855041505, 0.0, 0.0, 0.0, 0.5775999855041505, 0.0, 0.0, 0.0, 2.310399942016602]
+position_covariance_type: 1
+---
+header: 
+  seq: 26499
+  stamp: 
+    secs: 1475639037
+    nsecs: 746455424
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965697
+longitude: 120.2211699
+altitude: 45.215
+position_covariance: [0.5775999855041505, 0.0, 0.0, 0.0, 0.5775999855041505, 0.0, 0.0, 0.0, 2.310399942016602]
+position_covariance_type: 1
+---
+header: 
+  seq: 26500
+  stamp: 
+    secs: 1475639037
+    nsecs: 847651520
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965696
+longitude: 120.2211704
+altitude: 45.227
+position_covariance: [0.5775999855041505, 0.0, 0.0, 0.0, 0.5775999855041505, 0.0, 0.0, 0.0, 2.310399942016602]
+position_covariance_type: 1
+---
+header: 
+  seq: 26501
+  stamp: 
+    secs: 1475639037
+    nsecs: 947844544
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965696
+longitude: 120.2211705
+altitude: 45.23
+position_covariance: [0.5775999855041505, 0.0, 0.0, 0.0, 0.5775999855041505, 0.0, 0.0, 0.0, 2.310399942016602]
+position_covariance_type: 1
+---
+header: 
+  seq: 26502
+  stamp: 
+    secs: 1475639038
+    nsecs:  47627712
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965696
+longitude: 120.221171
+altitude: 45.242
+position_covariance: [0.5775999855041505, 0.0, 0.0, 0.0, 0.5775999855041505, 0.0, 0.0, 0.0, 2.310399942016602]
+position_covariance_type: 1
+---
+header: 
+  seq: 26503
+  stamp: 
+    secs: 1475639038
+    nsecs: 147512256
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965696
+longitude: 120.2211711
+altitude: 45.236
+position_covariance: [0.5775999855041505, 0.0, 0.0, 0.0, 0.5775999855041505, 0.0, 0.0, 0.0, 2.310399942016602]
+position_covariance_type: 1
+---
+header: 
+  seq: 26504
+  stamp: 
+    secs: 1475639038
+    nsecs: 247555264
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965696
+longitude: 120.2211717
+altitude: 45.253
+position_covariance: [0.5775999855041505, 0.0, 0.0, 0.0, 0.5775999855041505, 0.0, 0.0, 0.0, 2.310399942016602]
+position_covariance_type: 1
+---
+header: 
+  seq: 26505
+  stamp: 
+    secs: 1475639038
+    nsecs: 347593408
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211718
+altitude: 45.261
+position_covariance: [0.5775999855041505, 0.0, 0.0, 0.0, 0.5775999855041505, 0.0, 0.0, 0.0, 2.310399942016602]
+position_covariance_type: 1
+---
+header: 
+  seq: 26506
+  stamp: 
+    secs: 1475639038
+    nsecs: 447553216
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211725
+altitude: 45.258
+position_covariance: [0.5775999855041505, 0.0, 0.0, 0.0, 0.5775999855041505, 0.0, 0.0, 0.0, 2.310399942016602]
+position_covariance_type: 1
+---
+header: 
+  seq: 26507
+  stamp: 
+    secs: 1475639038
+    nsecs: 557682752
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965695
+longitude: 120.2211726
+altitude: 45.253
+position_covariance: [0.7055999559402473, 0.0, 0.0, 0.0, 0.7055999559402473, 0.0, 0.0, 0.0, 2.822399823760989]
+position_covariance_type: 1
+---
+header: 
+  seq: 26508
+  stamp: 
+    secs: 1475639038
+    nsecs: 657634880
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211732
+altitude: 45.26
+position_covariance: [0.7055999559402473, 0.0, 0.0, 0.0, 0.7055999559402473, 0.0, 0.0, 0.0, 2.822399823760989]
+position_covariance_type: 1
+---
+header: 
+  seq: 26509
+  stamp: 
+    secs: 1475639038
+    nsecs: 758846080
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965694
+longitude: 120.2211733
+altitude: 45.254
+position_covariance: [0.7055999559402473, 0.0, 0.0, 0.0, 0.7055999559402473, 0.0, 0.0, 0.0, 2.822399823760989]
+position_covariance_type: 1
+---
+header: 
+  seq: 26510
+  stamp: 
+    secs: 1475639038
+    nsecs: 858841472
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211738
+altitude: 45.275
+position_covariance: [0.7055999559402473, 0.0, 0.0, 0.0, 0.7055999559402473, 0.0, 0.0, 0.0, 2.822399823760989]
+position_covariance_type: 1
+---
+header: 
+  seq: 26511
+  stamp: 
+    secs: 1475639038
+    nsecs: 958837376
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965693
+longitude: 120.2211738
+altitude: 45.261
+position_covariance: [0.8281000477314002, 0.0, 0.0, 0.0, 0.8281000477314002, 0.0, 0.0, 0.0, 3.312400190925601]
+position_covariance_type: 1
+---
+header: 
+  seq: 26512
+  stamp: 
+    secs: 1475639039
+    nsecs:  58583936
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965692
+longitude: 120.2211745
+altitude: 45.256
+position_covariance: [0.8281000477314002, 0.0, 0.0, 0.0, 0.8281000477314002, 0.0, 0.0, 0.0, 3.312400190925601]
+position_covariance_type: 1
+---
+header: 
+  seq: 26513
+  stamp: 
+    secs: 1475639039
+    nsecs: 158517888
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965692
+longitude: 120.2211746
+altitude: 45.24
+position_covariance: [0.8281000477314002, 0.0, 0.0, 0.0, 0.8281000477314002, 0.0, 0.0, 0.0, 3.312400190925601]
+position_covariance_type: 1
+---
+header: 
+  seq: 26514
+  stamp: 
+    secs: 1475639039
+    nsecs: 268372480
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965691
+longitude: 120.221175
+altitude: 45.244
+position_covariance: [0.7055999559402473, 0.0, 0.0, 0.0, 0.7055999559402473, 0.0, 0.0, 0.0, 2.822399823760989]
+position_covariance_type: 1
+---
+header: 
+  seq: 26515
+  stamp: 
+    secs: 1475639039
+    nsecs: 368393472
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965691
+longitude: 120.2211751
+altitude: 45.235
+position_covariance: [0.7055999559402473, 0.0, 0.0, 0.0, 0.7055999559402473, 0.0, 0.0, 0.0, 2.822399823760989]
+position_covariance_type: 1
+---
+header: 
+  seq: 26516
+  stamp: 
+    secs: 1475639039
+    nsecs: 468398848
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965691
+longitude: 120.2211755
+altitude: 45.258
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26517
+  stamp: 
+    secs: 1475639039
+    nsecs: 568487168
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965691
+longitude: 120.2211756
+altitude: 45.266
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26518
+  stamp: 
+    secs: 1475639039
+    nsecs: 668590848
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211761
+altitude: 45.28
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26519
+  stamp: 
+    secs: 1475639039
+    nsecs: 769544512
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211762
+altitude: 45.27
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26520
+  stamp: 
+    secs: 1475639039
+    nsecs: 869806144
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211765
+altitude: 45.277
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26521
+  stamp: 
+    secs: 1475639039
+    nsecs: 969835328
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.996569
+longitude: 120.2211766
+altitude: 45.264
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26522
+  stamp: 
+    secs: 1475639040
+    nsecs:  69731136
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965689
+longitude: 120.2211769
+altitude: 45.28
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26523
+  stamp: 
+    secs: 1475639040
+    nsecs: 169621312
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965689
+longitude: 120.2211769
+altitude: 45.272
+position_covariance: [0.5928999706268314, 0.0, 0.0, 0.0, 0.5928999706268314, 0.0, 0.0, 0.0, 2.3715998825073257]
+position_covariance_type: 1
+---
+header: 
+  seq: 26524
+  stamp: 
+    secs: 1475639040
+    nsecs: 269644352
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965688
+longitude: 120.2211774
+altitude: 45.272
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26525
+  stamp: 
+    secs: 1475639040
+    nsecs: 369774912
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965687
+longitude: 120.2211774
+altitude: 45.263
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26526
+  stamp: 
+    secs: 1475639040
+    nsecs: 479677632
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965687
+longitude: 120.2211778
+altitude: 45.268
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26527
+  stamp: 
+    secs: 1475639040
+    nsecs: 579592128
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965686
+longitude: 120.2211779
+altitude: 45.269
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26528
+  stamp: 
+    secs: 1475639040
+    nsecs: 679579840
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965686
+longitude: 120.2211783
+altitude: 45.273
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26529
+  stamp: 
+    secs: 1475639040
+    nsecs: 780520960
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965686
+longitude: 120.2211783
+altitude: 45.269
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
+header: 
+  seq: 26530
+  stamp: 
+    secs: 1475639040
+    nsecs: 880676096
+  frame_id: fcu
+status: 
+  status: 0
+  service: 1
+latitude: 22.9965686
+longitude: 120.2211788
+altitude: 45.274
+position_covariance: [0.7569000082969666, 0.0, 0.0, 0.0, 0.7569000082969666, 0.0, 0.0, 0.0, 3.0276000331878663]
+position_covariance_type: 1
+---
