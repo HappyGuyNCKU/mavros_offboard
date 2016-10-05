@@ -7,36 +7,36 @@ import rospy
 import std_msgs.msg
 
 import sys
+import os
 
-
-def main(argv):
-  rospy.init_node('ultrasonic_front_left', anonymous=True)
+def main():
+  rospy.init_node('ultrasonic_node', anonymous=True)
   distance_msg = std_msgs.msg.Int16();
   GPIO.setmode(GPIO.BCM)                     #Set GPIO pin numbering 
 
   GPIO.setwarnings(False)
-  if str(sys.argv) == "down":
+  if str(sys.argv[1]) == "down":
     TRIG = 23                                  #Associate pin 23 to TRIG
     ECHO = 24                                  #Associate pin 24 to ECHO
     topic = "mavros/ultrasonic/down"
-  elif str(sys.argv) == "front":
+  elif str(sys.argv[1]) == "front":
     TRIG = 20
     ECHO = 21
     topic = "mavros/ultrasonic/front"
-  elif str(sys.argv) == "left":
+  elif str(sys.argv[1]) == "left":
     TRIG = 19
     ECHO = 26
     topic = "mavros/ultrasonic/left"
-  elif str(sys.argv) == "right":
+  elif str(sys.argv[1]) == "right":
     TRIG = 5
     ECHO = 6
     topic = "mavros/ultrasonic/right"
   else:
-    print "Usage ./ultrasonic.py <down/front/left/right>"
+    print "*********** Warning ***********\nUsing ./ultrasonic.py <down/front/left/right>\nexiting...."
     sys.exit()
 
   distance_pub = rospy.Publisher(topic,std_msgs.msg.Int16, queue_size=1)
-  rate = rospy.Rate(5)
+  rate = rospy.Rate(3)
 
   print "Distance measurement in progress"
 
@@ -76,6 +76,9 @@ def main(argv):
       distance_msg.data = 0                   #display out of range
     distance_pub.publish(distance_msg)
     rate.sleep()
+  
+  print "exiting..."
+  sys.exit()
 
 if __name__ == "__main__":
   try:
