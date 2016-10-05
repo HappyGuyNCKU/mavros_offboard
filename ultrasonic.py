@@ -1,19 +1,42 @@
+#!/usr/bin/python
+
 import RPi.GPIO as GPIO                    #Import GPIO library
-import time #Import time library
+import time 							   #Import time library
 
 import rospy
 import std_msgs.msg
 
+import sys
 
-def main():
+
+def main(argv):
   rospy.init_node('ultrasonic_front_left', anonymous=True)
-  distance_pub = rospy.Publisher('mavros/down/ultrasonic',std_msgs.msg.Int16, queue_size=1)
   distance_msg = std_msgs.msg.Int16();
   GPIO.setmode(GPIO.BCM)                     #Set GPIO pin numbering 
 
   GPIO.setwarnings(False)
-  TRIG = 23                                  #Associate pin 23 to TRIG
-  ECHO = 24                                  #Associate pin 24 to ECHO
+  if str(sys.argv) == "down":
+    TRIG = 23                                  #Associate pin 23 to TRIG
+    ECHO = 24                                  #Associate pin 24 to ECHO
+    topic = "mavros/ultrasonic/down"
+  elif str(sys.argv) == "front":
+    TRIG = 20
+    ECHO = 21
+    topic = "mavros/ultrasonic/front"
+  elif str(sys.argv) == "left":
+    TRIG = 19
+    ECHO = 26
+    topic = "mavros/ultrasonic/left"
+  elif str(sys.argv) == "right":
+    TRIG = 5
+    ECHO = 6
+    topic = "mavros/ultrasonic/right"
+  else:
+    print "Usage ./ultrasonic.py <down/front/left/right>"
+    sys.exit()
+
+  distance_pub = rospy.Publisher(topic,std_msgs.msg.Int16, queue_size=1)
+  rate = rospy.Rate(5)
 
   print "Distance measurement in progress"
 
@@ -24,7 +47,6 @@ def main():
   while not rospy.is_shutdown():
     GPIO.output(TRIG, False)                 #Set TRIG as LOW
     #print "Waitng For Sensor To Settle"
-    time.sleep(0.3)                            #Delay of 2 seconds
 
     GPIO.output(TRIG, True)                  #Set TRIG as HIGH
     time.sleep(0.00001)                      #Delay of 0.00001 seconds
@@ -53,6 +75,7 @@ def main():
     else:
       distance_msg.data = 0                   #display out of range
     distance_pub.publish(distance_msg)
+    rate.sleep()
 
 if __name__ == "__main__":
   try:
