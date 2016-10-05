@@ -31,8 +31,8 @@ class Quaternion:
 
 	q_shift_left = local_q(1,0,0,-angle)
 	q_shift_right = local_q(1,0,0,angle) 
-	q_forward = local_q(0,1,0,-5)
-	q_backward = local_q(0,1,0,5)
+	q_forward = local_q(0,1,0,-angle)
+	q_backward = local_q(0,1,0,angle)
 	q_rotate_cw = local_q(0,0,1,90)
 	q_rotate_cc = local_q(0,0,1,-90)
 

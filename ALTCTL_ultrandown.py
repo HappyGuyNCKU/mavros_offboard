@@ -220,6 +220,7 @@ def main():
     signal.signal(signal.SIGINT, INT_handler)
 
     q = Quaternion()
+    q_stable = Quaternion()
 ################### Take off#####
 
     set_pos_msg(msg,0,0,2)
@@ -263,7 +264,7 @@ def main():
             print "Interrupt by User"
             break
         attctl_count = attctl_count +1
-        mod = attctl_count % 100
+        mod = attctl_count % 250
         if mod == 30:
             q.shift_left()
             print "left"
@@ -271,12 +272,30 @@ def main():
             q.shift_right()
             print "back"
         elif mod == 70:
-            q.shift_left()
+            q.shift_right()
             print "right"
         elif mod == 80:
-            q.shift_right()
+            q.shift_left()
             print "back"
-        set_attitude_msg(attitude_pos_msg,q)
+        elif mod == 130:
+            q.forward()
+            print "forward"
+        elif mod == 140:
+            q.backward()
+            print "back"
+        elif mod == 170:
+            q.backward()
+            print "backward"
+        elif mod == 180:
+            q.forward()
+            print "back"
+        elif mod == 230:
+            q.rotate_cw()
+            print "rotate_cw"
+        if to_land == True:
+            set_attitude_msg(attitude_pos_msg,q_stable)
+        else:
+            set_attitude_msg(attitude_pos_msg,q_stable)
 
 ####### Landing #######
     print("landing")
