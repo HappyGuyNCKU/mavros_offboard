@@ -25,6 +25,7 @@ from quaternion import Quaternion
 import signal, os
 import sys
 
+
 ############flight_state##################
 #"Interrupt"
 #"OBSTACLE_AVOID"
@@ -45,10 +46,6 @@ local_pos_pub = None
 set_mode_client = None
 q = Quaternion()
 
-flag_front = 0
-flag_right = 0
-flag_left  = 0 
-
 def state_cb(msg):
     current_state = msg
 
@@ -61,8 +58,6 @@ def INT_handler(signum, frame):
         global set_mode_client
     
         print 'Signal handler called with signal', signum
-        resp = set_mode_client.call(0, 'AUTO.LAND')
-        print ("SetMode AUTO.LAND  state = %r" % resp)    
         sys.exit()
     else:
         global to_land
@@ -113,40 +108,45 @@ def laser_cb(msg):
         throttle_msg.data = land_thrust
     elif (s_force + d_force + i_force + offset) > max_thrust:
         throttle_msg.data = max_thrust
-        print "thrust reach max"
     elif (s_force + d_force + i_force + offset) < min_thrust:
         throttle_msg.data = min_thrust
-        print "thrust reach min"
     else :
         throttle_msg.data = s_force + d_force + i_force + offset   
 
 
 
-thresthold = 500
-####left 001
-####right 010
-####front 100
+thresthold = 100
 
 def laser_front_cb(msg):
-    global flag_front
+#    global q
     if msg.data < thresthold:
-	    flag_front = 1
+        q.set_q(q.q_backward)
+        print "front detect"
     else:
-        flag_front = 0
+        q.set_q(q.q_stable)
+    print "front"
+    q.printq()
+
 
 def laser_right_cb(msg):
-    global flag_right
+#global q
     if msg.data < thresthold:
-        flag_right = 1
+        q.set_q(q.q_shift_left)
+        print "right detect"
     else:
-        flag_right = 0
+        q.set_q(q.q_stable)
+    print "right"
+    q.printq()
 
 def laser_left_cb(msg):
-    global flag_left
+    global q
     if msg.data < thresthold:
-        flag_left = 1
+        q.set_q(q.q_shift_right)
+        print "left detect"
     else:
-        flag_left = 0
+        q.set_q(q.q_stable)
+    print "left"
+    q.printq()
 
 def set_pos_msg(msg,x,y,z):
     msg.pose.position.x = x
@@ -196,15 +196,6 @@ def main():
     mavros.set_namespace()  # initialize mavros module with default namespace
     #state_sub = rospy.Subscriber('mavros/state', State, state_cb, queue_size=10)
     throttle_msg = std_msgs.msg.Float64();
-    local_pos_pub = rospy.Publisher('/mavros/setpoint_position/local', PoseStamped, queue_size=10)
-    arming_client = rospy.ServiceProxy('/mavros/cmd/arming', CommandBool)
-    set_mode_client = rospy.ServiceProxy('/mavros/set_mode', SetMode)
-    
-    throttle_pub = rospy.Publisher('/mavros/setpoint_attitude/att_throttle', std_msgs.msg.Float64, queue_size=10)
-
-    attitude_pos_pub = rospy.Publisher('/mavros/setpoint_attitude/attitude', PoseStamped, queue_size=10)
-    
-#data_sub = rospy.Subscriber('/mavros/global_position/rel_alt', std_msgs.msg.Float64, data_cb ,queue_size=1)
 
     distance_sub = rospy.Subscriber('/mavros/ultrasonic/down',std_msgs.msg.Int16, laser_cb, queue_size=1)
 
@@ -214,108 +205,21 @@ def main():
 
     distance_front_sub = rospy.Subscriber('/mavros/ultrasonic/front',std_msgs.msg.Int16, laser_front_cb, queue_size=1)
 
-
-    thrust_srv = rospy.Service('/mavros/set_thrust', thrust, set_thrust)
-
     rate = rospy.Rate(10)   # 10hz
 
-    while (current_state and current_state.connected):
-        rate.sleep()
-
-    msg = SP.PoseStamped(
-            header=SP.Header(
-            frame_id="base_footprint",  # no matter, plugin don't use TF
-                stamp=rospy.Time.now()),    # stamp should update
-        )
     
 
-    attitude_pos_msg = SP.PoseStamped(
-            header=SP.Header(
-            frame_id="base_footprint",  # no matter, plugin don't use TF
-                stamp=rospy.Time.now()),    # stamp should update
-        )
 
-#    throttle_msg = std_msgs.msg.Float64();
-    throttle_msg.data = 0.64
-
-    # Set the signal handler
     signal.signal(signal.SIGINT, INT_handler)
 
     q_stable = Quaternion()
 ################### Take off#####
 
-    set_pos_msg(msg,0,0,2)
-    
-    for i in range(0, 20, 1):
-        local_pos_pub.publish(msg)
-        rate.sleep()
-
-    print "Takeoff !!!"
-
-    resp = set_mode_client.call(0, 'OFFBOARD')
-    print ("SetMode state = %r" % resp)
-
-    resp = arming_client.call(True)
-    print ("Arming state = %r" % resp)
-
-
-
-#for x in range(0, 50):
-#    	local_pos_pub.publish(msg)
-#        rate.sleep()
-    flight_state = "ALT_CTL"
-#########Loop################
-    print "takeoff"
-    set_attitude_msg(attitude_pos_msg,q)
-
-    for x in range(0, 30):
-        throttle_pub.publish(std_msgs.msg.Float64(0.7))
-        attitude_pos_pub.publish(attitude_pos_msg)
-        rate.sleep() 
-        
-    #set_pos_msg(msg,0,0,4)
-    #for x in range(0, 50):
-    #    local_pos_pub.publish(msg)
-    #    rate.sleep()
-    print "mission"
-    while not rospy.is_shutdown():
-        mission(msg)
-        if flight_state=="Interrupt":
-            print "Interrupt by User"
-            break
-        if to_land == True:
-            set_attitude_msg(attitude_pos_msg,q_stable)
-        else:
-            q.set_q(q.q_stable)
-            if flag_front == 1:
-                print "backward"
-                q.backward()
-            if flag_right == 1:
-                print "leftward"
-                q.shift_left()
-            if flag_left == 1:
-                print "rightward"
-                q.shift_right()
-            set_attitude_msg(attitude_pos_msg,q)
-
 ####### Landing #######
     print("landing")
-    set_pos_msg(msg,0,0,5)
-    msg.pose.position.x = 0
-    msg.pose.position.y = 0
-    msg.pose.position.z = 5
-
+    rospy.spin()
 
 ####### need time to land ###################
-    resp = set_mode_client.call(0, 'AUTO.LAND')
-    print ("SetMode state = %r" % resp)
-#    for x in range(0, 100):
-#        rate.sleep() 
-	
-    try:
-        pass
-    except:
-        rospy.loginfo("PX4 Ctl Shutting down")
 	
 if __name__ == "__main__":
     try:

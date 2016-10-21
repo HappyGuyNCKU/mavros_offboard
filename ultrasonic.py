@@ -16,8 +16,8 @@ def main():
 
   GPIO.setwarnings(False)
   if str(sys.argv[1]) == "down":
-    TRIG = 23                                  #Associate pin 23 to TRIG
-    ECHO = 24                                  #Associate pin 24 to ECHO
+    TRIG = 15                                  #Associate pin 23 to TRIG
+    ECHO = 18                                  #Associate pin 24 to ECHO
     topic = "mavros/ultrasonic/down"
   elif str(sys.argv[1]) == "front":
     TRIG = 20
