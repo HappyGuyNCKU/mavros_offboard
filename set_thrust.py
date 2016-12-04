@@ -51,9 +51,9 @@ def state_cb(msg):
 def INT_handler(signum, frame):
     global set_mode_client
     print 'Signal handler called with signal', signum
-    resp = set_mode_client.call(0, 'AUTO.LAND')
+    resp = set_mode_client(base_mode=0, custom_mode="AUTO.LAND")#set_mode_client.call(0, 'AUTO.LAND')
     print ("SetMode state = %r" % resp)    
-    sys.exit()
+    sys.exit(0)
 
 offset  = 0.1
 
@@ -62,15 +62,16 @@ def data_cb(data_msg):
     global last_pos_z
     global throttle_msg
     target_pos_z = 7.6
-    max_thrust = 0.85
+    max_thrust = 0.99
     p = 0.15
     s_force = 0#p * (target_pos_z-pos_z)
     d_force =  0#-1*(pos_z - last_pos_z)*10*math.sqrt(p)
     last_pos_z = pos_z
-    if (s_force + d_force +offset) > max_thrust:
-        throttle_msg.data = offset
-    else :
-        throttle_msg.data = s_force + d_force + offset
+#    if (s_force + d_force +offset) > max_thrust:
+#        throttle_msg.data = max_thrust
+#        print "reach max"
+#    else :
+    throttle_msg.data = s_force + d_force + offset
     #if pos_z <  1.65 :   #Low
     #    acce_state = 1
     #elif pos_z > 1.45 :    #High
@@ -160,11 +161,11 @@ def main():
     
     data_sub = rospy.Subscriber('/mavros/global_position/rel_alt', std_msgs.msg.Float64, data_cb ,queue_size=1)
 
-    distance_sub = rospy.Subscriber('/mavros/ultrasonic',std_msgs.msg.Int16, ultrasonci_cb, queue_size=1)
+#    distance_sub = rospy.Subscriber('/mavros/ultrasonic',std_msgs.msg.Int16, ultrasonci_cb, queue_size=1)
 
     thrust_srv = rospy.Service('/mavros/set_thrust', thrust, set_thrust)
 
-    rate = rospy.Rate(10)   # 10hz
+    rate = rospy.Rate(20)   # 10hz
 
     while (current_state and current_state.connected):
         rate.sleep()

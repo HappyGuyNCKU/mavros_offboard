@@ -39,7 +39,7 @@ attitude_pos_msg = None
 rate = None
 throttle_pub = None
 throttle_msg = None
-last_pos_z = 1.5
+last_pos_z = 0
 flight_state = "None"
 local_pos_pub = None
 set_mode_client = None
@@ -55,6 +55,15 @@ def state_cb(msg):
 int_count = 0
 to_land = False
 
+offset  = 0.55 #0.66
+land_thrust = 0.52
+target_pos_z = 1.0
+max_thrust = 0.61
+min_thrust = 0.5
+p = 0.01
+i = 0.0025
+i_force = 0
+
 def INT_handler(signum, frame):
     global int_count
     if int_count > 0:
@@ -67,7 +76,7 @@ def INT_handler(signum, frame):
     else:
         global to_land
         global throttle_msg
-        throttle_msg.data = 0.605
+        throttle_msg.data = land_thrust
         print "to land"
         to_land = True
     int_count = int_count + 1
@@ -91,14 +100,6 @@ def set_attitude():
     attitude_pos_pub.publish(attitude_pos_msg)
     rate.sleep()
 
-offset  = 0.64 #0.66
-land_thrust = 0.625
-target_pos_z = 1.0
-max_thrust = 0.7
-min_thrust = 0.57
-p = 0.03
-i = 0.001
-i_force = 0
 
 def laser_cb(msg):
     pos_z = msg.data/1000.0
@@ -236,7 +237,7 @@ def main():
         )
 
 #    throttle_msg = std_msgs.msg.Float64();
-    throttle_msg.data = 0.64
+    throttle_msg.data = 0.55
 
     # Set the signal handler
     signal.signal(signal.SIGINT, INT_handler)
@@ -269,7 +270,7 @@ def main():
     set_attitude_msg(attitude_pos_msg,q)
 
     for x in range(0, 30):
-        throttle_pub.publish(std_msgs.msg.Float64(0.7))
+        throttle_pub.publish(std_msgs.msg.Float64(0.54))
         attitude_pos_pub.publish(attitude_pos_msg)
         rate.sleep() 
         
