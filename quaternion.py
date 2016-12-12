@@ -1,4 +1,17 @@
 import math
+import numpy as np
+
+# rotate matrix creator
+def r_matrix(deg, out=None):
+	rad = (deg/360.0)*2*math.pi
+	cos = math.cos(rad)
+	sin = math.sin(rad)
+	matri = np.array([[cos,sin],[-1*sin,cos]])
+	if out != None:
+		out = matri
+	return matri
+
+
 
 class local_q:
 	w=1
@@ -28,8 +41,12 @@ class Quaternion:
 	z=0
 	degree = 0
 
+	vector = [1,0]
+
 	angle = 5
     
+
+	#rotation of quaternion is clockwise
 	q_stable = local_q(0,1,1,1)
 	q_shift_left = local_q(1,0,0,-angle)
 	q_shift_right = local_q(1,0,0,angle) 
@@ -45,22 +62,46 @@ class Quaternion:
 		self.z = q_local.z     
 
 	def shift_left(self):
-		self.multipy(self.q_shift_left)
+		self.roll = 1
+		self.update_qua(0)
+
 
 	def shift_right(self):
-		self.multipy(self.q_shift_right)
+		self.roll = -1
+		self.update_qua(0)
 
 	def forward(self):
-		self.multipy(self.q_forward)
+		self.pitch = 1
+		self.update_qua(0)
 
 	def backward(self):
-		self.multipy(self.q_backward)
+		self.pitch = -1
+		self.update_qua(0)
 
-	def rotate_cw(self):
-		self.multipy(self.q_rotate_cw)
+	def rotate_cw(self,deg):
+		self.degree += deg
+		m = rotate_matrix r_matrix(deg)
+		self.vector = m.dot(self.vector)	
+		self.update_qua(1)
 
-	def rotate_cc(self):
-		self.multipy(self.q_rotate_cc)
+	def rotate_cc(self,deg):
+		self.degree -= deg
+		m = rotate_matrix r_matrix(-deg)
+		self.vector = m.dot(self.vector)
+		self.update_qua(1)
+
+	def update_qua(self,option)
+		if option == 1:
+			print "update option 1"
+			deg = math	
+			pass
+		else if option == 0:
+			print "update option 0"
+			pass
+		else:
+			print "invalid option"
+			pass
+
 
 	def multipy(self,local):
 		#(Q1 * Q2).w = (w1w2 - x1x2 - y1y2 - z1z2)
